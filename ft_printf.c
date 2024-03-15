@@ -6,7 +6,7 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:45:19 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/15 03:02:02 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/15 03:47:51 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
+	int index;
 
-	if (format == NULL)
+	index = 0;
+	if (format == NULL || (format[index] == '%' && format[index + 1] == '\0'))
 		return (-1);
 	va_start(args, format);
+
+	va_end(args);
+	return (n_printed_chars);
 }
