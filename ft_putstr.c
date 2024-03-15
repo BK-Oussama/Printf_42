@@ -6,21 +6,20 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 17:05:40 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/12 18:14:59 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/15 02:33:19 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 #include "ft_printf.h"
 
-void    ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
-    int i;
-    
-    i = 0;
-    while (s[i])
-    {
-        ft_putchar(s[i]);
-        i++;
-    }
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
+	return (i);
 }

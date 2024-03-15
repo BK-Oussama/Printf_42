@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_decimal_to_hexa.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 16:48:36 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/15 02:32:09 by ouboukou         ###   ########.fr       */
+/*   Created: 2024/03/13 20:16:57 by ouboukou          #+#    #+#             */
+/*   Updated: 2024/03/15 02:21:25 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdbool.h>
+#include <stdio.h>
+#include <unistd.h>
 
-int	ft_putnbr(int n)
+int	ft_decimal_to_hexa(int n, int lower_upper)
 {
-	long	nbr;
-	int		count;
+	const char	hexa_lower[16] = "0123456789abcdef";
+	const char	hexa_upper[16] = "0123456789ABCDEF";
+	const char	*hexa;
+	int			count;
 
-	count = 1;
-	nbr = n;
-	if (n < 0)
+	if (lower_upper)
 	{
-		ft_putchar('-');
-		nbr = nbr * -1;
-		count++;
-	}
-	if (nbr > 9)
-	{
-		count = count + ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		hexa = hexa_upper;
 	}
 	else
-		ft_putchar(nbr + '0');
+	{
+		hexa = hexa_lower;
+	}
+	count = 1;
+	if (n > 15)
+	{
+		count = count + ft_decimal_to_hexa(n / 16, lower_upper);
+	}
+	ft_putchar(hexa[n % 16]);
 	return (count);
 }
