@@ -6,14 +6,10 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 20:16:57 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/15 02:21:25 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/15 03:01:40 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdbool.h>
-#include <stdio.h>
-#include <unistd.h>
 
 int	ft_decimal_to_hexa(int n, int lower_upper)
 {
