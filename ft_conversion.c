@@ -6,11 +6,11 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 22:45:10 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/16 03:40:41 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/16 16:46:49 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "ft_printf.h"
+
 int	ft_conversion(const char *format, va_list args, int index)
 {
 	int	count;

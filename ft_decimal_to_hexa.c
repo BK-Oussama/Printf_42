@@ -6,7 +6,7 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 20:16:57 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/15 03:32:04 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/16 16:46:31 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_decimal_to_hexa(unsigned long n, int lower_upper)
 	{
 		hexa = hexa_upper;
 	}
-	else if (lower_upper == 0)
+	if (lower_upper == 0)
 	{
 		hexa = hexa_lower;
 	}
@@ -35,4 +35,3 @@ int	ft_decimal_to_hexa(unsigned long n, int lower_upper)
 	ft_putchar(hexa[n % 16]);
 	return (count);
 }
-
