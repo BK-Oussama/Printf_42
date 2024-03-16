@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 /*  Functions   */
-void	ft_conversion(char *fromat, va_list args, int index);
+int	    ft_conversion(char *format, va_list args, int index);
 int		ft_decimal_to_hexa(unsigned long n, int lower_upper);
 int		ft_print_address(void *ptr);
 int		ft_printf(const char *format, ...);

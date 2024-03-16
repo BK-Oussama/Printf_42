@@ -35,3 +35,4 @@ int	ft_decimal_to_hexa(unsigned long n, int lower_upper)
 	ft_putchar(hexa[n % 16]);
 	return (count);
 }
+

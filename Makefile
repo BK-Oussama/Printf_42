@@ -1,9 +1,9 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCs = ft_conversion.cft_decimal_to_hexa.cft_print_address.cft_printf.cft_putchar.cft_putnbr.cft_putstr.cft_put_unsigned_nbr.c
+SRCs = ft_conversion.c ft_decimal_to_hexa.c ft_print_address.c ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_put_unsigned_nbr.c
 
-OBJs = ft_conversion.oft_decimal_to_hexa.oft_print_address.oft_printf.oft_putchar.oft_putnbr.oft_putstr.oft_put_unsigned_nbr.o
+OBJs = ft_conversion.o ft_decimal_to_hexa.o ft_print_address.o ft_printf.o ft_putchar.o ft_putnbr.o ft_putstr.o ft_put_unsigned_nbr.o
 
 NAME = ft_printf.a
 
@@ -12,7 +12,7 @@ all: $(NAME)
 $(NAME): $(OBJs)
 	ar rcs $(NAME) $(OBJs)
 
-clean:
+clean: 
 	rm -f $(OBJs) $(OBJs)
 
 fclean: clean

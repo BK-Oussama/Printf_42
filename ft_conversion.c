@@ -9,28 +9,31 @@
 /*   Updated: 2024/03/15 03:37:55 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "ft_printf.h"
 
-void	ft_conversion(char *fromat, va_list args, int index)
+int	ft_conversion(char *format, va_list args, int index)
 {
 	int	count;
 
 	count = 0;
-	if (format[index] == c)
+	if (format[index] == 'c')
 		count = count + ft_putchar(va_arg(args, char));
-	else if (format[index] == s)
+	else if (format[index] == 's')
 		count = count + ft_putstr(va_arg(args, char *));
-	else if (format[index] == p)
+	else if (format[index] == 'p')
 		count = count + ft_print_address(va_arg(args, unsigned long));
-	else if (format[index] == d)
+	else if (format[index] == 'd')
 		count = count + ft_putnbr(var_arg(args, int));
-	else if (format[index] == i)
+	else if (format[index] == 'i')
 		count = count + ft_putnbr(var_arg(args, int));
-	else if (format[index] == u)
+	else if (format[index] == 'u')
 		count = count + ft_put_unsigned_nbr(va_arg(args, unsigned int));
-	else if (format[index] == x)
+	else if (format[index] == 'x')
 		count = count + decimal_to_hexa(va_arg(args, unsigned long));
-	else if (format[index] == X)
-		count = count + Decimal_To_Hexa(va_arg(args, int), x);
+	else if (format[index] == 'X')
+		count = count + Decimal_To_Hexa(va_arg(args, int), 1);
 	else if (format[index] == '%')
 		count = count + ft_putchar('%');
+	else
+		count = count + ft_putchar(format[index]);
 }
