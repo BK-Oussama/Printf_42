@@ -5,7 +5,7 @@ SRCs = ft_conversion.c ft_decimal_to_hexa.c ft_print_address.c ft_printf.c ft_pu
 
 OBJs = ft_conversion.o ft_decimal_to_hexa.o ft_print_address.o ft_printf.o ft_putchar.o ft_putnbr.o ft_putstr.o ft_put_unsigned_nbr.o
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 all: $(NAME)
 
