@@ -12,13 +12,14 @@
 
 #include "ft_printf.h"
 
-int	ft_decimal_to_hexa(unsigned long long n, int lower_upper)
+int	ft_decimal_to_hexa(unsigned long n, int lower_upper)
 {
 	const char	hexa_lower[16] = "0123456789abcdef";
 	const char	hexa_upper[16] = "0123456789ABCDEF";
 	const char	*hexa;
 	int			count;
 
+	count = 1; 
 	if (lower_upper == 1)
 	{
 		hexa = hexa_upper;
@@ -27,7 +28,6 @@ int	ft_decimal_to_hexa(unsigned long long n, int lower_upper)
 	{
 		hexa = hexa_lower;
 	}
-	count = 1;
 	if (n > 15)
 	{
 		count = count + ft_decimal_to_hexa(n / 16, lower_upper);
