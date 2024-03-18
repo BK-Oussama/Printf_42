@@ -19,8 +19,8 @@
 
 /*  Functions   */
 int	ft_conversion(const char *format, va_list args, int index);
-int	ft_decimal_to_hexa(unsigned long n, int lower_upper);
-int	ft_print_address(unsigned long ptr);
+int	ft_decimal_to_hexa(unsigned long long n, int lower_upper);
+int	ft_print_address(unsigned long long ptr);
 int	ft_printf(const char *format, ...);
 int	ft_put_unsigned_nbr(unsigned int n);
 int	ft_putchar(char c);

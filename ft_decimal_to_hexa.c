@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_decimal_to_hexa(unsigned long n, int lower_upper)
+int	ft_decimal_to_hexa(unsigned long long n, int lower_upper)
 {
 	const char	hexa_lower[16] = "0123456789abcdef";
 	const char	hexa_upper[16] = "0123456789ABCDEF";

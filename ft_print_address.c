@@ -12,17 +12,17 @@
 
 #include "ft_printf.h"
 
-int	ft_print_address(unsigned long ptr)
+int	ft_print_address(unsigned long long ptr)
 {
 	int	count;
 
 	if (!ptr)
 	{
-		ft_putstr("(nil)");
-		return (5);
+		ft_putstr("0x0");
+		return (3);
 	}
 	ft_putstr("0x");
-	count = 0;
-	count = count + ft_decimal_to_hexa((unsigned long)ptr, 0);
+	count = 1;
+	count = count + ft_decimal_to_hexa((unsigned long long)ptr, 0);
 	return (count + 2);
 }

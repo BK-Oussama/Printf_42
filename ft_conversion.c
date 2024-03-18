@@ -21,7 +21,7 @@ int	ft_conversion(const char *format, va_list args, int index)
 	else if (format[index] == 's')
 		count = count + ft_putstr(va_arg(args, char *));
 	else if (format[index] == 'p')
-		count = count + ft_print_address(va_arg(args, unsigned long));
+		count = count + ft_print_address(va_arg(args, unsigned long long));
 	else if (format[index] == 'd' || format[index] == 'i')
 		count = count + ft_putnbr(va_arg(args, int));
 	else if (format[index] == 'u')
