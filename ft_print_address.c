@@ -6,7 +6,7 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 19:56:54 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/16 16:01:45 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/19 02:21:02 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_print_address(unsigned long ptr)
 		return (3);
 	}
 	count = ft_putstr("0x");
-	count = count + ft_decimal_to_hexa((unsigned long long)ptr, 0);
+	count = count + ft_decimal_to_hexa((unsigned long long)ptr);
 	return (count);
 }
