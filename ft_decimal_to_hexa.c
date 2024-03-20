@@ -6,25 +6,26 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 20:16:57 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/19 03:51:41 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:33:26 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_decimal_to_hexa(unsigned long n)
+int	ft_decimal_to_hexa(unsigned int n)
 {
-	char	hexa[] = "0123456789abcdef";
+	char	*hexa;
 	char	rslt[32];
-	int i;
-	int j;
-	
+	int		i;
+	int		j;
+
+	hexa = "0123456789abcdef";
 	if (0 == n)
 	{
 		ft_putchar('0');
-		return 1;
+		return (1);
 	}
-	i = 0;	
+	i = 0;
 	while (n)
 	{
 		rslt[i] = hexa[n % 16];
@@ -37,7 +38,5 @@ int	ft_decimal_to_hexa(unsigned long n)
 		ft_putchar(rslt[j]);
 		j--;
 	}
-	return (i + 1);
-	
+	return (i);
 }
-
