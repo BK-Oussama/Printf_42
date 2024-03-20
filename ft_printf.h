@@ -6,7 +6,7 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 17:42:54 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/20 00:18:15 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/20 18:00:29 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 
 /*  Functions   */
 int	ft_conversion(const char *format, va_list args, int index);
-int	ft_decimal_to_hexa(unsigned int n);
-int	ft_decimal_to_hexa_upper(unsigned int n);
+int	ft_decimal_to_hexa(unsigned int n, int upper_or_lower);
 int	ft_print_address(unsigned long ptr);
 int	ft_printf(const char *format, ...);
 int	ft_put_unsigned_nbr(unsigned int n);

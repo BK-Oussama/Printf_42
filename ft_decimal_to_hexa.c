@@ -6,37 +6,34 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 20:16:57 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/20 00:33:26 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/20 19:34:18 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_decimal_to_hexa(unsigned int n)
+int	ft_decimal_to_hexa(unsigned int n, int upper_or_lower)
 {
+	char	hexa_lower[16] = "0123456789abcdef";
+	char	hexa_upper[16] = "0123456789ABCDEF";
 	char	*hexa;
-	char	rslt[32];
-	int		i;
-	int		j;
+	int 	count;
 
-	hexa = "0123456789abcdef";
+	if (upper_or_lower)
+		hexa = hexa_upper;
+	else
+		hexa = hexa_lower;
+	
 	if (0 == n)
 	{
 		ft_putchar('0');
 		return (1);
 	}
-	i = 0;
-	while (n)
+	count = 1;
+	if (n > 15)
 	{
-		rslt[i] = hexa[n % 16];
-		n = n / 16;
-		i++;
+		count = count + ft_decimal_to_hexa(n / 16, upper_or_lower);
 	}
-	j = i - 1;
-	while (j >= 0)
-	{
-		ft_putchar(rslt[j]);
-		j--;
-	}
-	return (i);
+	ft_putchar(hexa[n % 16]);
+	return (count);
 }
