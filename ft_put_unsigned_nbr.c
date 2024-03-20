@@ -6,14 +6,12 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 01:42:53 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/15 02:30:39 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/20 22:59:41 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-// first check if you can use the same putnbr
-// with calling va_arg(args,	unsigned int)
 int	ft_put_unsigned_nbr(unsigned int n)
 {
 	long	nbr;
