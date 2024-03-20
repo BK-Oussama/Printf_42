@@ -6,7 +6,7 @@
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 20:16:57 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/20 19:34:18 by ouboukou         ###   ########.fr       */
+/*   Updated: 2024/03/20 20:16:51 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 int	ft_decimal_to_hexa(unsigned int n, int upper_or_lower)
 {
-	char	hexa_lower[16] = "0123456789abcdef";
-	char	hexa_upper[16] = "0123456789ABCDEF";
 	char	*hexa;
-	int 	count;
+	int		count;
 
 	if (upper_or_lower)
-		hexa = hexa_upper;
+		hexa = "0123456789ABCDEF";
 	else
-		hexa = hexa_lower;
-	
+		hexa = "0123456789abcdef";
 	if (0 == n)
 	{
 		ft_putchar('0');
