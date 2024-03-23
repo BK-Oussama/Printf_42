@@ -17,23 +17,16 @@ int	main(void)
 {
 	int	x;
 	int	i;
-	printf("\n----------------------- Standard Output: ----------------------\n");
 
+	printf("\n----------------------- Standard Output: ----------------------\n");
 	x = ft_printf("");
 	printf("\n");
-	
 	i = printf("");
 	printf("\n");
-	
 	printf("---------------------------------------------------------------\n\n\n");
-
-
 	printf("\n------------------------ Return Values: -----------------------\n");
-	printf("\nFT_printf return value:\t%d\n", x);
-	printf("printf return value:\t%d\n", i);	
+	printf("\nFT_printf return (value:\t%d\n", x));
+	printf("printf return (value:\t%d\n", i));
 	printf("\n---------------------------------------------------------------\n\n\n");
-
-	
 	return (0);
 }
-
