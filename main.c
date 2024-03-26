@@ -57,6 +57,8 @@
 //         printf("Error: Return values differ for percent sign test (std: %d, ft: %d)\n", std_ret, ft_ret);
 //     }
 
+
+check this output, erlier on sana's mac on ft_ i got: * instead of A
 //     // Mixed format specifier test
 //     std_ret = printf("This is a string with a number (%d) and a character (%c).\n", num, ch);
 //     ft_ret = ft_printf("This is a string with a number (%d) and a character (%c).\n", num, ch);
