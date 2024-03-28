@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ouboukou <ouboukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 22:53:41 by ouboukou          #+#    #+#             */
-/*   Updated: 2024/03/28 18:00:19 by ouboukou         ###   ########.fr       */
+/*   Created: 2024/03/12 15:45:19 by ouboukou          #+#    #+#             */
+/*   Updated: 2024/03/28 18:05:18 by ouboukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <string.h>
 
-int	main(void)
+int	ft_printf(const char *format, ...)
 {
-	int		ft_rslt;
-	int		std_rslt;
-	char	*str;
+	va_list	args;
+	int		index;
+	int		n_printed_chars;
 
-	str = NULL;
-	printf("\n----------------------- Standard Output: ----------------------\n");
-	ft_rslt = ft_printf("%");
-	printf("\n");
-	std_rslt = printf("%");
-	printf("\n");
-	printf("\n------------------------ Return Values: -----------------------\n");
-	if (std_rslt != ft_rslt)
-		printf("\nError: Return values do not match\n");
-	else
-		printf("\nReturn values matches\n");
-	printf("std return (Values: %d\nFT_return Value: %d\n", std_rslt, ft_rslt));
-	printf("\n---------------------------------------------------------------\n\n\n");
-	return (0);
+	va_start(args, format);
+	index = 0;
+	n_printed_chars = 0;
+	while (format[index])
+	{
+		if (format[index] == '%')
+		{
+			index++;
+			if (format[index] == '\0')
+			{
+				break ;
+			}
+			n_printed_chars += ft_conversion(format, args, (index));
+		}
+		else
+			n_printed_chars = n_printed_chars + ft_putchar(format[index]);
+		index++;
+	}
+	va_end(args);
+	return (n_printed_chars);
 }
